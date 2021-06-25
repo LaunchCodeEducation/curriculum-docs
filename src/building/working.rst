@@ -251,7 +251,7 @@ deploying.
 
 .. note:: 
 
-   Some course instructors and TAs may be granded direct commit access to course curriculum modules, based on the circumstances. If you would like direct commit access, talk to somebody on the Education team.
+   Some course instructors and TAs may be granted direct commit access to course curriculum modules, based on the circumstances. If you would like direct commit access, talk to somebody on the Education team.
 
 Staff Contributions
 ~~~~~~~~~~~~~~~~~~~
