@@ -14,14 +14,14 @@ Use the following command inside your wiki directory:
 
 ::
 
-   git remote add upstream URL 
+   git remote add https://github.com/LaunchCodeEducation/curriculum-wiki-template.git
 
 Then merge in the upstream with your ``main`` branch.
 
 ::
 
    git fetch upstream
-   git merge upstream
+   git merge upstream/master
 
 Your directory should now include files with general information about the textbook and a script, ``deploy-to-wiki.sh``.
 Find and replace COURSE_NAME with name of your course textbook repo.
