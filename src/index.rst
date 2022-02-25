@@ -10,6 +10,7 @@ Building the Sites
 .. toctree::
    :maxdepth: 2
 
+   building/contributing-a-pr
    building/setup
    building/working
 
