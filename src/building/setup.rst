@@ -37,7 +37,7 @@ Install `Sphinx <http://www.sphinx-doc.org/en/master/>`__:
 
 ::
 
-   $ pip install sphinx==1.8.5
+   $ pip install sphinx
 
 Install
 `Recommonmark <https://recommonmark.readthedocs.io/en/latest/>`__ to
