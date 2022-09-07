@@ -12,6 +12,7 @@ Building the Sites
 
    building/contributing-a-pr
    building/setup
+   building/wiki-setup
    building/working
 
 Style and Formatting
@@ -20,6 +21,7 @@ Style and Formatting
 .. toctree::
    :maxdepth: 2
 
+   guide/sphinx-background
    guide/style
    guide/admonitions
    guide/accessibility
