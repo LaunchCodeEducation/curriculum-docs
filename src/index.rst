@@ -14,6 +14,8 @@ Building the Sites
    building/setup
    building/wiki-setup
    building/working
+   building/wiki-setup
+
 
 Style and Formatting
 ====================
