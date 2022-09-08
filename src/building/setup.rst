@@ -86,30 +86,30 @@ Clone the site template into a new directory:
 
 ::
 
-   $ git clone git@github.com:LaunchCodeEducation/curriculum-module-template.git SITE_NAME
+   $ git clone git@github.com:LaunchCodeEducation/curriculum-book-template.git SITE_NAME
 
 Alternatively, if you don't have an SSH key configured for your GitHub
 account, use HTTP:
 
 ::
 
-   $ git clone http://github.com/LaunchCodeEducation/curriculum-module-template SITE_NAME
+   $ git clone http://github.com/LaunchCodeEducation/curriculum-book-template SITE_NAME
 
 Move into the new project directory. Make the module template repository
 the new site's ``upstream`` remote, for ease of updating the site when
-the ``curriculum-module-template`` repository is updated:
+the ``curriculum-book-template`` repository is updated:
 
 ::
 
    $ git remote rm origin
-   $ git remote add upstream git@github.com:LaunchCodeEducation/curriculum-module-template.git
+   $ git remote add upstream git@github.com:LaunchCodeEducation/curriculum-book-template.git
 
 Or, with HTTP:
 
 ::
 
    $ git remote rm origin
-   $ git remote add upstream http://github.com/LaunchCodeEducation/curriculum-module-template
+   $ git remote add upstream http://github.com/LaunchCodeEducation/curriculum-book-template
 
 Create a new *empty* repository on GitHub, under
 [@LaunchCodeEducation](https://github.com/LaunchCodeEducation) or
@@ -226,7 +226,7 @@ Updating site styles
 ~~~~~~~~~~~~~~~~~~~~
 
 To update the site template (get changes to ``_static`` files,
-``build.sh``, and other files from ``curriculum-module-template``),
+``build.sh``, and other files from ``curriculum-book-template``),
 fetch the upstream changes and merge them into the ``master`` branch.
 
 ::
