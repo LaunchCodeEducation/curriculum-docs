@@ -13,6 +13,8 @@ Building the Sites
    building/contributing-a-pr
    building/setup
    building/working
+   building/wiki-setup
+
 
 Style and Formatting
 ====================

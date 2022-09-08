@@ -166,12 +166,17 @@ Here are a few things to note if you're new to RST:
 -  Headings do not require a specific character (as MD does with ``#``).
    Instead, any text underlined by a repeated occurance of the same
    character will be a heading. The level of the heading is determined
-   by the order of the character used in the doc. For example: \``\`
-   Level 1 Heading ===============
+   by the order of the character used in the doc. 
+   
+   For example: 
+   
+   * Level 1 Heading ===============
 
-   Level 2 Heading —————
+   * Level 2 Heading —————
 
-   Another Level 1 Heading ======================= \``\`
+   * Another Level 1 Heading ======================= 
+
+   * Level 3 Heading ^^^^^^^^^^
 
 -  The `RST and Sphinx
    Cheatsheet <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`__
