@@ -21,6 +21,7 @@ Style and Formatting
 .. toctree::
    :maxdepth: 2
 
+   guide/sphinx-background
    guide/style
    guide/admonitions
    guide/accessibility

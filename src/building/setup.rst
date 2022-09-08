@@ -222,8 +222,8 @@ Updating the Theme or Styles
 Occasionally the site's theme or styles will be updated. We discuss how
 to get and deploy such changes.
 
-Updating site styles
-~~~~~~~~~~~~~~~~~~~~
+Updating the site template
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To update the site template (get changes to ``_static`` files,
 ``build.sh``, and other files from ``curriculum-book-template``),
@@ -243,8 +243,10 @@ these, merge all other conflicts and rebuild the site. Also be watchful
 for any new files added by this merge. The merge may bring in images or
 ``.rst`` files that are not used by your project.
 
-Updating the site template
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _update-theme:
+
+Updating the site theme
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To update the site's template, update your local install of
 ``sphinx-bootstrap-template`` (``--upprade`` forces the package to be
