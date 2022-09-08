@@ -14,7 +14,7 @@ you'll find this repository at https://github.com/LaunchCodeEducation/intro-to-p
 
 From that GitHub page, use the 'Fork' button to fork a copy to your GitHub profile.
 
-.. admoniition:: Note
+.. admonition:: Note
     
     If you are a member of the LaunchCodeEducation organization on GitHub,
     you do not need to use a forked copy of the repository and can instead 
