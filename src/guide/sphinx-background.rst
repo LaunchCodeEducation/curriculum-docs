@@ -11,6 +11,8 @@ The Theme
 
 Themes are used to set the design standards of a website, such as fonts and colors. The theme we use is ``sphinx-bootstrap-theme``.
 ``sphinx-bootstrap-theme`` controls what styles are passed to the sites. The LaunchCode version is a fork so we regularly pull in updates from the upstream if we are getting too far behind.
+When updating ``sphinx-bootstramp-theme``, you should be cognizant of the versions of any of the included packages, such as Bootstrap and JQuery, have changed.
+If so, you need to update ``layout.html`` in ``curriculum-book-template``. You can do so by reviewing `layout.html <https://github.com/LaunchCodeEducation/sphinx-bootstrap-theme/blob/master/sphinx_bootstrap_theme/bootstrap/layout.html>`__ in ``sphinx-bootstrap-theme`` and making the appropriate changes in ``layout.html`` in ``curriculum-book-template``.
 Fetching changes from the upstream constitutes most updates made to ``sphinx-bootstrap-theme``, except for changing colors.
 
 To change the colors specifically, you have to do the following steps to ensure that ``sphinx-bootstrap-theme`` gets the changes:
