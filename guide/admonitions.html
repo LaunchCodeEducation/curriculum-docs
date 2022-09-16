@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admonitions &#8212; LaunchCode Curriculum Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fa/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/launchcode.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Curriculum Accessibility" href="accessibility.html" />
+    <link rel="prev" title="Style Guide" href="style.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/lc-ed-logo.png" alt="LaunchCode logo"></span>
+          Curriculum Docs</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ol>
+<li class="toctree-l1"><a class="reference internal" href="../building/contributing-a-pr.html">Contributing a Pull Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/setup.html">Setting Up A New Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/wiki-setup.html">Set Up a New Course Wiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/working.html">Working With An Existing Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/wiki-setup.html">Set Up a New Course Wiki</a></li>
+</ol>
+<ol class="current">
+<li class="toctree-l1"><a class="reference internal" href="sphinx-background.html">How Sphinx Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accessibility.html">Curriculum Accessibility</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
+</ol>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+    <label for="q" class="searchLabel">Search</label>
+    <input type="text" name="q" class="form-control" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Admonitions</a><ul>
+<li><a class="reference internal" href="#admonition-usage">Admonition Usage</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="admonitions">
+<h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
+<p>Admonitions call attention to content by placing it in a box with a label. RST provides several directives for creating admonitions with specific titles and styles, as well as a generic admonition with a title specified by the author.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Admonition</th>
+<th class="head">Directive</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Note</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span></code></td>
+</tr>
+<tr class="row-odd"><td>Warning</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">warning::</span></code></td>
+</tr>
+<tr class="row-even"><td>Tip</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">tip::</span></code></td>
+</tr>
+<tr class="row-odd"><td>Question</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span> <span class="pre">Question</span></code></td>
+</tr>
+<tr class="row-even"><td>Example</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span> <span class="pre">Example</span></code></td>
+</tr>
+<tr class="row-odd"><td>Examples</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span> <span class="pre">Examples</span></code></td>
+</tr>
+<tr class="row-even"><td>Try It!</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span> <span class="pre">Try</span> <span class="pre">It!</span></code></td>
+</tr>
+<tr class="row-odd"><td>Fun Fact</td>
+<td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span> <span class="pre">Fun</span> <span class="pre">Fact</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Avoid using other RST admonitions, as well as over-using custom admonitions. Custom admonitions should not be used for one-off or limited-use purposes. If you feel the urge to call attention to content with a specific title, consider using a section heading.</p>
+<div class="section" id="admonition-usage">
+<h2>Admonition Usage<a class="headerlink" href="#admonition-usage" title="Permalink to this headline">¶</a></h2>
+<p>Strive to use admonitions consistently. Admonitions are effective only when they enhance the readability of a text. If admonition usage is inconsistent, then readers will learn to ignore the titles, decreasing the effectiveness of all admonitions.</p>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">The Note is probably the most widely used admonition. It should be used to call attention to an important point. Often, Notes will also deviate from the main flow of discussion a bit.</p>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Warning</p>
+<p class="last">Use a Warning to emphasize a subtle or surprising fact that could cause students trouble.</p>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-lightbulb" aria-hidden="true"></i>Tip</p>
+<p class="last">Use a Tip to offer a helpful hint or piece of advice.</p>
+</div>
+<div class="admonition-question admonition">
+<p class="first admonition-title"><i class="fas fa-question" aria-hidden="true"></i>Question</p>
+<p class="last">Questions are most often used in “Check Your Understanding” sections, and block out a self-check question that the reader should consider.</p>
+</div>
+<div class="admonition-example admonition">
+<p class="first admonition-title"><i class="fas fa-binoculars" aria-hidden="true"></i>Example</p>
+<p class="last">Examples provide concrete instances of the topic at hand.</p>
+</div>
+<div class="admonition-examples admonition">
+<p class="first admonition-title"><i class="fas fa-binoculars" aria-hidden="true"></i>Examples</p>
+<p class="last">Like an Example, but plural (duh).</p>
+</div>
+<div class="admonition-try-it admonition">
+<p class="first admonition-title"><i class="fas fa-puzzle-piece" aria-hidden="true"></i>Try It!</p>
+<p>Try It! admonitions call the reader to learn by doing. Use Try It! with a prompt or program that the reader should engage with to better understand a concept.</p>
+<p class="last">A common pattern is to follow a Try It! with a Question related to the prompt.</p>
+</div>
+<div class="admonition-fun-fact admonition">
+<p class="first admonition-title"><i class="fas fa-rocket" aria-hidden="true"></i>Fun Fact</p>
+<p class="last">An interesting, but supplemental, fact related to the current discussion. Fun Fact admonitions should communicate to the reader that the content is not part of the lesson’s objectives, but is something that might be interesting or useful.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/guide/admonitions.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

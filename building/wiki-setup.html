@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Up a New Course Wiki &#8212; LaunchCode Curriculum Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fa/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/launchcode.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Working With An Existing Module Site" href="working.html" />
+    <link rel="prev" title="Setting Up A New Module Site" href="setup.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/lc-ed-logo.png" alt="LaunchCode logo"></span>
+          Curriculum Docs</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ol class="current">
+<li class="toctree-l1"><a class="reference internal" href="contributing-a-pr.html">Contributing a Pull Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setting Up A New Module Site</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Set Up a New Course Wiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working.html">Working With An Existing Module Site</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Set Up a New Course Wiki</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../guide/sphinx-background.html">How Sphinx Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/style.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/admonitions.html">Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/accessibility.html">Curriculum Accessibility</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
+</ol>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+    <label for="q" class="searchLabel">Search</label>
+    <input type="text" name="q" class="form-control" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Set Up a New Course Wiki</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="set-up-a-new-course-wiki">
+<h1>Set Up a New Course Wiki<a class="headerlink" href="#set-up-a-new-course-wiki" title="Permalink to this headline">¶</a></h1>
+<p>The course wikis can be found under the Wiki tab on the repos for the course textbook. The wiki holds general information about the textbook and information about the pain points for each lesson.
+Instead of individually editing each page under this tab, we have a second repository to manage contributions from course staff, CEMs, and the Education team.
+This second repository is the wiki repository.</p>
+<p>Under the LaunchCodeEducation Github organization, create a new repository. For wiki repos, the naming convention is to name it after the textbook repo and add “-wiki” at the end.
+For example, the wiki repo for the JavaScript textbook is called <code class="docutils literal notranslate"><span class="pre">intro-to-professional-web-dev-wiki</span></code>.
+Clone the new repository to your local machine.</p>
+<p>Now we need to add the wiki template as an upstream repository.
+Use the following command inside your wiki directory:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git remote add https://github.com/LaunchCodeEducation/curriculum-wiki-template.git
+</pre></div>
+</div>
+<p>Then merge in the upstream with your <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git fetch upstream
+git merge upstream/master
+</pre></div>
+</div>
+<p>Your directory should now include files with general information about the textbook and a script, <code class="docutils literal notranslate"><span class="pre">deploy-to-wiki.sh</span></code>.
+Find and replace COURSE_NAME with name of your course textbook repo.
+For example, if your textbook repo’s name is <code class="docutils literal notranslate"><span class="pre">intro-to-professional-web-dev</span></code>, you find and replace COURSE_NAME with “intro-to-professional-web-dev”.
+This insures that the URLS in your repo are leading to the correct place.</p>
+<p>Commit and push your changes to your <code class="docutils literal notranslate"><span class="pre">main</span></code> branch. Now you are ready to deploy your changes to the wiki tab on the textbook repo for course staff and CEMs to easily access.
+To do so, we need to run <code class="docutils literal notranslate"><span class="pre">deploy-to-wiki.sh</span></code>.
+In your directory, run the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./deploy-to-wiki.sh
+</pre></div>
+</div>
+<p>This should result in your changes showing up under the wiki tab on the course textbook repo.
+If it fails to run, it might be because the script is not buildable on your machine.
+Try running:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>chmod +x deploy-to-wiki.sh
+</pre></div>
+</div>
+<p>If that completes, try runing your script again. You should see the changes successfully pushed to textbook repo.
+Head over to the wiki tab on the textbook repo to confirm.</p>
+<p>With these steps complete, make sure to share your wiki repo with CEMs and course staff so they can submit issues and create PRs throughout their course!</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/building/wiki-setup.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

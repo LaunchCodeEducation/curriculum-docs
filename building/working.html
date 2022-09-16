@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working With An Existing Module Site &#8212; LaunchCode Curriculum Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fa/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/launchcode.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How Sphinx Works" href="../guide/sphinx-background.html" />
+    <link rel="prev" title="Set Up a New Course Wiki" href="wiki-setup.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/lc-ed-logo.png" alt="LaunchCode logo"></span>
+          Curriculum Docs</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ol class="current">
+<li class="toctree-l1"><a class="reference internal" href="contributing-a-pr.html">Contributing a Pull Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setting Up A New Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working With An Existing Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../guide/sphinx-background.html">How Sphinx Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/style.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/admonitions.html">Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/accessibility.html">Curriculum Accessibility</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
+</ol>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+    <label for="q" class="searchLabel">Search</label>
+    <input type="text" name="q" class="form-control" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Working With An Existing Module Site</a><ul>
+<li><a class="reference internal" href="#building-the-site">Building the Site</a></li>
+<li><a class="reference internal" href="#viewing-the-site-locally">Viewing the Site Locally</a><ul>
+<li><a class="reference internal" href="#macos-and-linux">macOS and Linux</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#editing-documents">Editing Documents</a><ul>
+<li><a class="reference internal" href="#restructured-text">reStructured Text</a><ul>
+<li><a class="reference internal" href="#pros">Pros</a></li>
+<li><a class="reference internal" href="#cons">Cons</a></li>
+<li><a class="reference internal" href="#working-with-rst">Working with RST</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#markdown">Markdown</a><ul>
+<li><a class="reference internal" href="#pros-1">Pros</a></li>
+<li><a class="reference internal" href="#cons-1">Cons</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-markdown">Working with Markdown</a><ul>
+<li><a class="reference internal" href="#tables">Tables</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#site-style">Site Style</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deploying">Deploying</a><ul>
+<li><a class="reference internal" href="#non-staff-contributions">Non-Staff Contributions</a></li>
+<li><a class="reference internal" href="#staff-contributions">Staff Contributions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="working-with-an-existing-module-site">
+<h1>Working With An Existing Module Site<a class="headerlink" href="#working-with-an-existing-module-site" title="Permalink to this headline">¶</a></h1>
+<p>To edit and publish content on an existing curriculum site, make sure
+you have the necessary prerequisites and have set up Sphinx, as detailed
+in <a class="reference external" href="setup.html" target="_blank">Setting Up A New Module Site<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>.</p>
+<div class="section" id="building-the-site">
+<h2>Building the Site<a class="headerlink" href="#building-the-site" title="Permalink to this headline">¶</a></h2>
+<p>Clone the repository and, from the project directory, verify that you
+can build the site.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ./build.sh
+Running Sphinx v1.7.2
+loading pickled environment... not yet created
+building [mo]: all of 0 po files
+building [html]: all source files
+updating environment: 1 added, 0 changed, 0 removed
+reading sources... [100%] index
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [100%] index
+generating indices... genindex
+writing additional pages... search
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en) ... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in docs.
+</pre></div>
+</div>
+<p>If the build script fails due to a permissions error, enable its
+executable bit:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ chmod +x build.sh
+</pre></div>
+</div>
+<p>The build script builds HTML files from the source Markdown and
+reStructuredText files, using a template. It places the built files in
+the <code class="docutils literal notranslate"><span class="pre">/docs</span></code> folder so they can be hosted via GitHub Pages.</p>
+</div>
+<div class="section" id="viewing-the-site-locally">
+<h2>Viewing the Site Locally<a class="headerlink" href="#viewing-the-site-locally" title="Permalink to this headline">¶</a></h2>
+<p>When updating a site, you should build and proof your changes locally
+before committing them. To do this, we’ll use Python’s <code class="docutils literal notranslate"><span class="pre">http.server</span></code>
+module.</p>
+<div class="section" id="macos-and-linux">
+<h3>macOS and Linux<a class="headerlink" href="#macos-and-linux" title="Permalink to this headline">¶</a></h3>
+<p>Add the following line to your <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code> (macOS) or
+<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> (Linux):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>alias serve=&#39;python -m http.server&#39;
+</pre></div>
+</div>
+<p>Open a second terminal window and navigate to the project’s <code class="docutils literal notranslate"><span class="pre">/docs</span></code>
+folder. Then run:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ serve
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+</pre></div>
+</div>
+<p>You can now view the site at <code class="docutils literal notranslate"><span class="pre">localhost:8000</span></code>. You can rebuild the
+site in another window while the server is still running, and changes
+will be immediately reflected.</p>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>First check to make sure you have a <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code> and a
+<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file, as most Windows machines do not automatically create
+these files. If they do not exist create them using the following
+commands:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ touch ~/.bash_profile
+$ touch ~/.bashrc
+</pre></div>
+</div>
+<p>Now add the following line to your <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> if it is not
+already there:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+</pre></div>
+</div>
+<p>Then add the following line to your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>alias serve=&#39;python -m http.server&#39;
+</pre></div>
+</div>
+<p>Open a second terminal window and navigate to the project’s <code class="docutils literal notranslate"><span class="pre">/docs</span></code>
+folder. Then run:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ serve
+</pre></div>
+</div>
+<p>You can now view the site at <code class="docutils literal notranslate"><span class="pre">localhost:8000</span></code>. You can rebuild the
+site in another window while the server is still running, and changes
+will be immediately reflected.</p>
+</div>
+</div>
+<div class="section" id="editing-documents">
+<h2>Editing Documents<a class="headerlink" href="#editing-documents" title="Permalink to this headline">¶</a></h2>
+<p>Sites build using the LaunchCode Sphinx site template may have source
+code in either Markdown (abbreviated MD, with extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>) or
+reStructuredText (abbreviated RST, with extension<code class="docutils literal notranslate"><span class="pre">.rst</span></code>) formats.</p>
+<p>Most LaunchCode Education sites rely primarily on RST, though in some
+cases it may be suitable to use MD source files.</p>
+<div class="section" id="restructured-text">
+<h3>reStructured Text<a class="headerlink" href="#restructured-text" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pros">
+<h4>Pros<a class="headerlink" href="#pros" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Table of contents generation</li>
+<li>Built-in admonition (note, warning, etc) support</li>
+<li>Support for cross-page references</li>
+</ul>
+</div>
+<div class="section" id="cons">
+<h4>Cons<a class="headerlink" href="#cons" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>More complicated syntax than MD</li>
+<li>Less well-known among developers than MD</li>
+<li>Table syntax is difficult to work with</li>
+</ul>
+</div>
+<div class="section" id="working-with-rst">
+<h4>Working with RST<a class="headerlink" href="#working-with-rst" title="Permalink to this headline">¶</a></h4>
+<p>reStructuredText can have a bit of a learning curve if you’re accustomed
+to Markdown. That said, once you get used to the basics it has definite
+advantages to using MD.</p>
+<p>Read the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html" target="_blank">Sphinx reStructuredText
+Primer<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>, and bookmark
+it as a reference. A modest familiarity with RST with go a long way
+toward allowing you to create rich curriculum pages.</p>
+<p>Here are a few things to note if you’re new to RST:</p>
+<ul>
+<li><p class="first">RST is sensitive to whitespace in some cases. For example, when using
+a directive, the contents of the directive must be indented to align
+with the directive name (usually 3 spaces).</p>
+</li>
+<li><p class="first">Tables in RST require alignment of column contents and
+column-separators vertically. This is a common gotcha for those new
+to RST.</p>
+</li>
+<li><p class="first">Headings do not require a specific character (as MD does with <code class="docutils literal notranslate"><span class="pre">#</span></code>).
+Instead, any text underlined by a repeated occurance of the same
+character will be a heading. The level of the heading is determined
+by the order of the character used in the doc.</p>
+<p>For example:</p>
+<ul class="simple">
+<li>Level 1 Heading ===============</li>
+<li>Level 2 Heading —————</li>
+<li>Another Level 1 Heading =======================</li>
+<li>Level 3 Heading ^^^^^^^^^^</li>
+</ul>
+</li>
+<li><p class="first">The <a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html" target="_blank">RST and Sphinx
+Cheatsheet<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+is a good resource for getting used to RST. Note that the rendered
+examples may look slightly different visually than those given due to
+differences between Sphinx templates.</p>
+</li>
+</ul>
+<p>When building a site with Sphinx, you are often given robust and
+descriptive warnings and errors. At first, these can seem daunting (“Why
+is Sphinx always yelling at me?!”) but paying attention to them can help
+you keep your markup code clean and avoid issues down the road.</p>
+</div>
+</div>
+<div class="section" id="markdown">
+<h3>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h3>
+<p>When setting up Sphinx via <a class="reference external" href="//building/setup.html#sphinx-setup" target="_blank">our
+instructions<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> we had you install
+a Sphinx extension that enables support for
+<a class="reference external" href="http://commonmark.org/" target="_blank">CommonMark<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>, a widely-used Markdown
+specificaion. Note that CommonMark does not include widely-used features
+such as table support, which are part of MD language extensions
+(e.g.&nbsp;GitHub Markdown).</p>
+<div class="section" id="pros-1">
+<span id="id1"></span><h4>Pros<a class="headerlink" href="#pros-1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Simple syntax</li>
+<li>Is more widely known by developers than RST</li>
+</ul>
+</div>
+<div class="section" id="cons-1">
+<span id="id2"></span><h4>Cons<a class="headerlink" href="#cons-1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Lacks several useful features supported by RST (see above)</li>
+<li>CommonMark does not support tables</li>
+</ul>
+</div>
+</div>
+<div class="section" id="working-with-markdown">
+<h3>Working with Markdown<a class="headerlink" href="#working-with-markdown" title="Permalink to this headline">¶</a></h3>
+<p>Many developers are already familiar with Markdown syntax. However, we
+still encourage all contributors to skim the <a class="reference external" href="http://commonmark.org/help/" target="_blank">CommonMark
+docs<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> to make sure you’re using features
+built into CommonMark, which is a smaller spec than many others.</p>
+<div class="section" id="tables">
+<h4>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h4>
+<p>CommonMark does not directly support Markdown tables. It is possible to
+support Markdown tables in Sphinx via a source-translation approach (MD
+-&gt; RST -&gt; HTML). As of July 2018, this feature has not been implemented,
+and is in the template development backlog. If you absolutely need to
+use tables in your pages, we recommend using RST instead.</p>
+</div>
+</div>
+<div class="section" id="site-style">
+<h3>Site Style<a class="headerlink" href="#site-style" title="Permalink to this headline">¶</a></h3>
+<p>When creating pages, use the <a class="reference external" href="//guide/style.html" target="_blank">Style Guide<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>. This
+guide provides some basic conventions for improving the look and feel of
+curriculum sites, while providing for consistency across sites.</p>
+</div>
+</div>
+<div class="section" id="deploying">
+<h2>Deploying<a class="headerlink" href="#deploying" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve made some changes to the site–edit, built, test,
+commit–you’re ready to deploy. How to do this depends on your role.</p>
+<div class="section" id="non-staff-contributions">
+<h3>Non-Staff Contributions<a class="headerlink" href="#non-staff-contributions" title="Permalink to this headline">¶</a></h3>
+<p>For those not on the LaunchCode Education team, the recommended
+deployment mechanism is to create a pull request. This allows the team
+to review your changes, and to look for common formatting issues before
+deploying.</p>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">Some course instructors and TAs may be granted direct commit access to course curriculum modules, based on the circumstances. If you would like direct commit access, talk to somebody on the Education team.</p>
+</div>
+</div>
+<div class="section" id="staff-contributions">
+<h3>Staff Contributions<a class="headerlink" href="#staff-contributions" title="Permalink to this headline">¶</a></h3>
+<p>All Education Team staff should have push permission for the
+repositories that they’re working on. Pushing changes to the GitHub repo
+will automatically deploy the new files.</p>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Warning</p>
+<p class="last">Changes to GitHub Pages sites can take several minutes to be reflected. If you push and don’t see your change, wait a few minutes and do a hard refresh of the page.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/building/working.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

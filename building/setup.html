@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting Up A New Module Site &#8212; LaunchCode Curriculum Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fa/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/launchcode.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Set Up a New Course Wiki" href="wiki-setup.html" />
+    <link rel="prev" title="Contributing a Pull Request" href="contributing-a-pr.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/lc-ed-logo.png" alt="LaunchCode logo"></span>
+          Curriculum Docs</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ol class="current">
+<li class="toctree-l1"><a class="reference internal" href="contributing-a-pr.html">Contributing a Pull Request</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting Up A New Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working.html">Working With An Existing Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../guide/sphinx-background.html">How Sphinx Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/style.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/admonitions.html">Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/accessibility.html">Curriculum Accessibility</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
+</ol>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+    <label for="q" class="searchLabel">Search</label>
+    <input type="text" name="q" class="form-control" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Setting Up A New Module Site</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sphinx-setup">Sphinx Setup</a><ul>
+<li><a class="reference internal" href="#installing-the-theme-for-development">Installing the theme for development</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#site-setup">Site Setup</a><ul>
+<li><a class="reference internal" href="#building-the-site">Building the site</a></li>
+<li><a class="reference internal" href="#publishing-via-github-pages">Publishing via GitHub Pages</a></li>
+<li><a class="reference internal" href="#site-specific-settings">Site-specific settings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#updating-the-theme-or-styles">Updating the Theme or Styles</a><ul>
+<li><a class="reference internal" href="#updating-the-site-template">Updating the site template</a></li>
+<li><a class="reference internal" href="#updating-the-site-theme">Updating the site theme</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="setting-up-a-new-module-site">
+<h1>Setting Up A New Module Site<a class="headerlink" href="#setting-up-a-new-module-site" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>Working with our Sphinx setup requires Python 3.5+.</p>
+<p>Check your Python version:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python -V
+Python 3.6.1 :: Continuum Analytics, Inc.
+</pre></div>
+</div>
+<p>On some systems, Python 3 will be installed as <code class="docutils literal notranslate"><span class="pre">python3</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -V
+Python 3.6.5
+</pre></div>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">If you are using <code class="docutils literal notranslate"><span class="pre">python3</span></code>, you’ll need to use <code class="docutils literal notranslate"><span class="pre">pip3</span></code> wherever <code class="docutils literal notranslate"><span class="pre">pip</span></code> is used in the sections below.</p>
+</div>
+<p>If you don’t have a sufficient Python install, we recommend installing
+<a class="reference external" href="https://conda.io/miniconda.html" target="_blank">Miniconda<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>.</p>
+</div>
+</div>
+<div class="section" id="sphinx-setup">
+<h2>Sphinx Setup<a class="headerlink" href="#sphinx-setup" title="Permalink to this headline">¶</a></h2>
+<p>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/" target="_blank">Sphinx<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx
+</pre></div>
+</div>
+<p>Install
+<a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/" target="_blank">Recommonmark<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> to
+allow for writing of Markdown files in Sphinx:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install recommonmark
+</pre></div>
+</div>
+<p>Install the LaunchCode fork of the <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code> Sphinx
+theme.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install git+https://github.com/LaunchCodeEducation/sphinx-bootstrap-theme.git@master
+</pre></div>
+</div>
+<p>Install pypandoc because if you don’t, you will see an error after
+running build</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install pypandoc
+</pre></div>
+</div>
+<div class="section" id="installing-the-theme-for-development">
+<h3>Installing the theme for development<a class="headerlink" href="#installing-the-theme-for-development" title="Permalink to this headline">¶</a></h3>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">Only complete this step if you want to edit the theme for all sites. Otherwise, skip to the next section.</p>
+</div>
+<p>If you want to make changes to the theme, clone its <a class="reference external" href="https://github.com/LaunchCodeEducation/sphinx-bootstrap-theme" target="_blank">GitHub
+repo<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>.
+From the repository directory <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme/</span></code>, run:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install -e .
+</pre></div>
+</div>
+<p>This installs the Python package from the source contained in the cloned
+repo.</p>
+</div>
+</div>
+<div class="section" id="site-setup">
+<h2>Site Setup<a class="headerlink" href="#site-setup" title="Permalink to this headline">¶</a></h2>
+<p>Clone the site template into a new directory:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone git@github.com:LaunchCodeEducation/curriculum-book-template.git SITE_NAME
+</pre></div>
+</div>
+<p>Alternatively, if you don’t have an SSH key configured for your GitHub
+account, use HTTP:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone http://github.com/LaunchCodeEducation/curriculum-book-template SITE_NAME
+</pre></div>
+</div>
+<p>Move into the new project directory. Make the module template repository
+the new site’s <code class="docutils literal notranslate"><span class="pre">upstream</span></code> remote, for ease of updating the site when
+the <code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code> repository is updated:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git remote rm origin
+$ git remote add upstream git@github.com:LaunchCodeEducation/curriculum-book-template.git
+</pre></div>
+</div>
+<p>Or, with HTTP:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git remote rm origin
+$ git remote add upstream http://github.com/LaunchCodeEducation/curriculum-book-template
+</pre></div>
+</div>
+<p>Create a new <em>empty</em> repository on GitHub, under
+[&#64;LaunchCodeEducation](<a class="reference external" href="https://github.com/LaunchCodeEducation" target="_blank">https://github.com/LaunchCodeEducation<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>) or
+[&#64;LaunchCoderGirl](<a class="reference external" href="https://github.com/LaunchCoderGirlSTL" target="_blank">https://github.com/LaunchCoderGirlSTL<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>), as
+appropriate. Add the new repo as a remote to your local repository, and
+push:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git remote add origin NEW_REPO_URL
+$ git push origin master
+</pre></div>
+</div>
+<div class="section" id="building-the-site">
+<h3>Building the site<a class="headerlink" href="#building-the-site" title="Permalink to this headline">¶</a></h3>
+<p>Now build the site and push, so we can configure GitHub Pages:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ./build.sh
+Running Sphinx v1.7.2
+loading pickled environment... not yet created
+building [mo]: all of 0 po files
+building [html]: all source files
+updating environment: 1 added, 0 changed, 0 removed
+reading sources... [100%] index
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [100%] index
+generating indices... genindex
+writing additional pages... search
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en) ... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in docs.
+</pre></div>
+</div>
+<p>If the build script fails due to a permissions error, enable its
+executable bit:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ chmod +x build.sh
+</pre></div>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">At this point, if you wish to view the site locally then follow the <a class="reference external" href="//building/working.html#viewing-the-site-locally" target="_blank">instructions to set up a local HTTP preview server<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>.</p>
+</div>
+<p>Before you can commit, remove the following line from <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docs/*
+</pre></div>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Warning</p>
+<p class="last">At this point, it is very important to make sure you followed the directions above to point your <code class="docutils literal notranslate"><span class="pre">origin</span></code> remote at the right location.</p>
+</div>
+<p>After the build successfully completes, add and commit the built site.
+You’ll have several new files and directories in this commit, since it
+will be the first (and only) time many of the site’s static files are
+moved into the <code class="docutils literal notranslate"><span class="pre">/docs</span></code>, from which they’ll be served.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git add .
+$ git commit -m &quot;Initial build&quot;
+$ git push origin master
+</pre></div>
+</div>
+</div>
+<div class="section" id="publishing-via-github-pages">
+<h3>Publishing via GitHub Pages<a class="headerlink" href="#publishing-via-github-pages" title="Permalink to this headline">¶</a></h3>
+<p>From the repository’s <em>Settings</em> page, enable GitHub Pages via the
+<code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory.</p>
+<div class="figure align-default" id="id1">
+<img alt="Enable GitHub Pages" src="../_images/enable-gh-pages.png" />
+<p class="caption"><span class="caption-text">Enable GitHub Pages</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>After a couple of minutes, you should be able to access the live site
+via its GitHub Pages URL.</p>
+</div>
+<div class="section" id="site-specific-settings">
+<h3>Site-specific settings<a class="headerlink" href="#site-specific-settings" title="Permalink to this headline">¶</a></h3>
+<p>At the top of <code class="docutils literal notranslate"><span class="pre">src/conf.py</span></code>, add your site-specific settings. Be sure
+to at least configure:</p>
+<ul class="simple">
+<li>Variables in <code class="docutils literal notranslate"><span class="pre">site_theme_options</span></code>:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">navbar_title</span></code>: The site name that will appear in the navbar.</li>
+<li><code class="docutils literal notranslate"><span class="pre">navbar_site_name</span></code>: The title of the dropdown in the navbar that
+lists top-level site pages.</li>
+<li><code class="docutils literal notranslate"><span class="pre">bootswatch_theme</span></code>: Either <code class="docutils literal notranslate"><span class="pre">launchcode</span></code> or <code class="docutils literal notranslate"><span class="pre">codergirl</span></code>,
+depending on the intended program for the module being published.</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code>: The name of the curriculum module (e.g.&nbsp;“LaunchCode’s
+Liftoff”)</li>
+<li>If creating a site for CoderGirl, set
+<code class="docutils literal notranslate"><span class="pre">html_logo</span> <span class="pre">=</span> <span class="pre">'_static/images/logos/codergirl-white.png'</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="updating-the-theme-or-styles">
+<h2>Updating the Theme or Styles<a class="headerlink" href="#updating-the-theme-or-styles" title="Permalink to this headline">¶</a></h2>
+<p>Occasionally the site’s theme or styles will be updated. We discuss how
+to get and deploy such changes.</p>
+<div class="section" id="updating-the-site-template">
+<h3>Updating the site template<a class="headerlink" href="#updating-the-site-template" title="Permalink to this headline">¶</a></h3>
+<p>To update the site template (get changes to <code class="docutils literal notranslate"><span class="pre">_static</span></code> files,
+<code class="docutils literal notranslate"><span class="pre">build.sh</span></code>, and other files from <code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code>),
+fetch the upstream changes and merge them into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git fetch upstream
+$ git merge upstream/master
+</pre></div>
+</div>
+<p>Then build the site, commit, and push.</p>
+<p>When merging, be very mindful of merge conflicts. In particular,
+conflicts in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> are common. Additionally, you
+may have conflicts in <code class="docutils literal notranslate"><span class="pre">docs/</span></code> (the build directory). To deal with
+these, merge all other conflicts and rebuild the site. Also be watchful
+for any new files added by this merge. The merge may bring in images or
+<code class="docutils literal notranslate"><span class="pre">.rst</span></code> files that are not used by your project.</p>
+</div>
+<div class="section" id="updating-the-site-theme">
+<span id="update-theme"></span><h3>Updating the site theme<a class="headerlink" href="#updating-the-site-theme" title="Permalink to this headline">¶</a></h3>
+<p>To update the site’s template, update your local install of
+<code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-template</span></code> (<code class="docutils literal notranslate"><span class="pre">--upprade</span></code> forces the package to be
+downloaded again):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade git+https://github.com/LaunchCodeEducation/sphinx-bootstrap-theme.git@master
+</pre></div>
+</div>
+<p>Then build the site, commit, and push.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/building/setup.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

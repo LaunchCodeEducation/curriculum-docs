@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contributing a Pull Request &#8212; LaunchCode Curriculum Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fa/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/launchcode.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting Up A New Module Site" href="setup.html" />
+    <link rel="prev" title="LaunchCode Curriculum Docs" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/lc-ed-logo.png" alt="LaunchCode logo"></span>
+          Curriculum Docs</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ol class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing a Pull Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setting Up A New Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working.html">Working With An Existing Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../guide/sphinx-background.html">How Sphinx Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/style.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/admonitions.html">Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/accessibility.html">Curriculum Accessibility</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
+</ol>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+    <label for="q" class="searchLabel">Search</label>
+    <input type="text" name="q" class="form-control" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Contributing a Pull Request</a><ul>
+<li><a class="reference internal" href="#fork-and-clone-the-textbook-repository">Fork and Clone the Textbook Repository</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sphinx-setup">Sphinx Setup</a><ul>
+<li><a class="reference internal" href="#building-the-site">Building the site</a></li>
+<li><a class="reference internal" href="#adding-committing-and-pushing-your-suggested-changes">Adding, Committing, and Pushing Your Suggested Changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="contributing-a-pull-request">
+<h1>Contributing a Pull Request<a class="headerlink" href="#contributing-a-pull-request" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fork-and-clone-the-textbook-repository">
+<h2>Fork and Clone the Textbook Repository<a class="headerlink" href="#fork-and-clone-the-textbook-repository" title="Permalink to this headline">¶</a></h2>
+<p>Your first step in making a contribution to our open-source textbooks is to grab a copy
+of the code for the book site you want to change. The book site name will tell you
+where to go to find the repository.</p>
+<p>For example, if you want to make a change to the book at
+<a class="reference external" href="https://education.launchcode.org/intro-to-professional-web-dev" target="_blank">https://education.launchcode.org/intro-to-professional-web-dev<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>,
+you’ll find this repository at <a class="reference external" href="https://github.com/LaunchCodeEducation/intro-to-professional-web-dev" target="_blank">https://github.com/LaunchCodeEducation/intro-to-professional-web-dev<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>.</p>
+<p>From that GitHub page, use the ‘Fork’ button to fork a copy to your GitHub profile.</p>
+<div class="admonition-note admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">If you are a member of the LaunchCodeEducation organization on GitHub,
+you do not need to use a forked copy of the repository and can instead
+simply clone the repository you want to edit.</p>
+</div>
+<p>Clone the forked repository onto your computer:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone git@github.com:LaunchCodeEducation/intro-to-professional-web-dev.git
+</pre></div>
+</div>
+<p>Alternatively, if you don’t have an SSH key configured for your GitHub
+account, use HTTPS:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/LaunchCodeEducation/intro-to-professional-web-dev.git
+</pre></div>
+</div>
+<p>With a copy of the code for the book, you’ll next have to build the program on your computer.
+First, you have to setup your computer with some dependencies to get the text built.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>Working with our Sphinx setup requires Python 3.5+.</p>
+<p>Check your Python version:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python -V
+Python 3.6.1 :: Continuum Analytics, Inc.
+</pre></div>
+</div>
+<p>On some systems, Python 3 will be installed as <code class="docutils literal notranslate"><span class="pre">python3</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -V
+Python 3.6.5
+</pre></div>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">If you are using <code class="docutils literal notranslate"><span class="pre">python3</span></code>, you’ll need to use <code class="docutils literal notranslate"><span class="pre">pip3</span></code> wherever <code class="docutils literal notranslate"><span class="pre">pip</span></code> is used in the sections below.</p>
+</div>
+<p>If you don’t have a sufficient Python install, we recommend installing
+<a class="reference external" href="https://conda.io/miniconda.html" target="_blank">Miniconda<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>.</p>
+</div>
+</div>
+<div class="section" id="sphinx-setup">
+<h2>Sphinx Setup<a class="headerlink" href="#sphinx-setup" title="Permalink to this headline">¶</a></h2>
+<p>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/" target="_blank">Sphinx<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx==3.3.1
+</pre></div>
+</div>
+<p>Install
+<a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/" target="_blank">Recommonmark<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> to
+allow for writing of Markdown files in Sphinx:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install recommonmark
+</pre></div>
+</div>
+<p>Install the LaunchCode fork of the <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code> Sphinx
+theme.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install git+https://github.com/LaunchCodeEducation/sphinx-bootstrap-theme.git@master
+</pre></div>
+</div>
+<p>Install pypandoc because if you don’t, you will see an error after
+running build</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install pypandoc
+</pre></div>
+</div>
+<div class="section" id="building-the-site">
+<h3>Building the site<a class="headerlink" href="#building-the-site" title="Permalink to this headline">¶</a></h3>
+<p>Now build the site using the <em>build</em> script in the project’s root directory.
+To do this, open a terminal window and navigate to the project’s root directory.
+Use the command below to build. If all is setup correctly, you will start to see the build
+logs look something like those below.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ./build.sh
+Running Sphinx v3.3.1
+loading pickled environment... not yet created
+building [mo]: all of 0 po files
+building [html]: all source files
+updating environment: 1 added, 0 changed, 0 removed
+reading sources... [100%] index
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [100%] index
+generating indices... genindex
+writing additional pages... search
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en) ... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in docs.
+</pre></div>
+</div>
+<p>If the build script fails due to a permissions error, enable its
+executable bit:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ chmod +x build.sh
+</pre></div>
+</div>
+<div class="admonition">
+<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p class="last">At this point, if you wish to view the site locally, the build command will have created a new
+directory in the project called <em>docs/</em>. Open this directory and find <em>index.html</em>.
+Right click on the file name for <em>index.html</em> and select <em>Copy Path</em>. Drop this into
+your browser of choice (not Internet Explorer, please). You should see the built site running.</p>
+</div>
+</div>
+<div class="section" id="adding-committing-and-pushing-your-suggested-changes">
+<h3>Adding, Committing, and Pushing Your Suggested Changes<a class="headerlink" href="#adding-committing-and-pushing-your-suggested-changes" title="Permalink to this headline">¶</a></h3>
+<p>Be sure to make your changes on a feature branch so that you can create a PR off master
+for the LaunchCode team to review.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git add .
+$ git commit -m &quot;Initial build&quot;
+$ git push origin master
+</pre></div>
+</div>
+<p>Once pushed, <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank">open a PR on GitHub<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> and we’ll be in touch to review your work and
+get your contributions merged in and deployed.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/building/contributing-a-pr.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

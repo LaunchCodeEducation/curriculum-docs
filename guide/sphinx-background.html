@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Sphinx Works &#8212; LaunchCode Curriculum Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fa/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/launchcode.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Style Guide" href="style.html" />
+    <link rel="prev" title="Working With An Existing Module Site" href="../building/working.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/lc-ed-logo.png" alt="LaunchCode logo"></span>
+          Curriculum Docs</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ol>
+<li class="toctree-l1"><a class="reference internal" href="../building/contributing-a-pr.html">Contributing a Pull Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/setup.html">Setting Up A New Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/wiki-setup.html">Set Up a New Course Wiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/working.html">Working With An Existing Module Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/wiki-setup.html">Set Up a New Course Wiki</a></li>
+</ol>
+<ol class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How Sphinx Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonitions.html">Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accessibility.html">Curriculum Accessibility</a></li>
+</ol>
+<ol>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
+</ol>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+    <label for="q" class="searchLabel">Search</label>
+    <input type="text" name="q" class="form-control" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">How Sphinx Works</a><ul>
+<li><a class="reference internal" href="#the-theme">The Theme</a></li>
+<li><a class="reference internal" href="#the-template">The Template</a></li>
+<li><a class="reference internal" href="#the-ci-tool">The CI Tool</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="how-sphinx-works">
+<h1>How Sphinx Works<a class="headerlink" href="#how-sphinx-works" title="Permalink to this headline">¶</a></h1>
+<p>Sphinx is a static site generator that is based on Python and RST. Our Sphinx sites incorporate several different elements that you have already installed.
+These elements can be placed into three different buckets: the theme, the template, and the continuous integration (CI) tool.
+Templates are used to set the layout of a website, such as the navbar.
+We use a CI tool to build the curriculum sites so that if a bad build is pushed to the repository, a previous version of the site will remain live for the students.</p>
+<div class="section" id="the-theme">
+<h2>The Theme<a class="headerlink" href="#the-theme" title="Permalink to this headline">¶</a></h2>
+<p>Themes are used to set the design standards of a website, such as fonts and colors. The theme we use is <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code>.
+<code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code> controls what styles are passed to the sites. The LaunchCode version is a fork so we regularly pull in updates from the upstream if we are getting too far behind.
+When updating <code class="docutils literal notranslate"><span class="pre">sphinx-bootstramp-theme</span></code>, you should be cognizant of the versions of any of the included packages, such as Bootstrap and JQuery, have changed.
+If so, you need to update <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> in <code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code>. You can do so by reviewing <a class="reference external" href="https://github.com/LaunchCodeEducation/sphinx-bootstrap-theme/blob/master/sphinx_bootstrap_theme/bootstrap/layout.html" target="_blank">layout.html<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> in <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code> and making the appropriate changes in <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> in <code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code>.
+Fetching changes from the upstream constitutes most updates made to <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code>, except for changing colors.</p>
+<p>To change the colors specifically, you have to do the following steps to ensure that <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code> gets the changes:</p>
+<ol class="arabic simple">
+<li>Clone <a class="reference external" href="https://github.com/LaunchCodeEducation/bootswatch" target="_blank">bootswatch<i class="fas fa-external-link-alt" aria-hidden="true"></i></a> to your computer.</li>
+<li>Locate the theme you are planning on updating. <code class="docutils literal notranslate"><span class="pre">launchcode</span></code> contains the styles for sites hosted on education.launchcode.org.</li>
+<li>Within the directory for the theme you are hoping to update, update <code class="docutils literal notranslate"><span class="pre">variables.less</span></code> with the necessary changes.</li>
+<li>At the project root, run <code class="docutils literal notranslate"><span class="pre">grunt</span> <span class="pre">swatch</span></code>.</li>
+<li>At the project root, you will find <code class="docutils literal notranslate"><span class="pre">index.html</span></code>. Check out that file to see your changes.</li>
+<li>When you are confident in your changes, commit them to <code class="docutils literal notranslate"><span class="pre">lc_stable</span></code>.</li>
+<li>Post-build of your updates to <code class="docutils literal notranslate"><span class="pre">bootswatch</span></code>, copy the contents of the file, <code class="docutils literal notranslate"><span class="pre">bootstrap.min.css</span></code> in your theme directory.</li>
+<li>Open <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code> and paste the updated contents of <code class="docutils literal notranslate"><span class="pre">bootstrap.min.css</span></code> in the coordinating theme directory. Push the changes to the default branch.</li>
+<li>To see the updates, run the <a class="reference internal" href="../building/setup.html#update-theme"><span class="std std-ref">update command</span></a>.</li>
+</ol>
+</div>
+<div class="section" id="the-template">
+<h2>The Template<a class="headerlink" href="#the-template" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code> is the template which all of our books are built on. The template includes:</p>
+<ol class="arabic simple">
+<li>General settings configured in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</li>
+<li>General settings for Travis, our CI tool.</li>
+<li><code class="docutils literal notranslate"><span class="pre">launchcode.css</span></code>, which is used to set the colors and styles for our code blocks. At the time of writing, we do not have a branded Pygments theme so we have to overwrite the Pygments styling at the template level.</li>
+</ol>
+<p>If you make a change in one book that the other books would benefit from, make sure to apply that change to <code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code>.
+To pull in updates to the template to the book you are working on, fetch the changes from the upstream.</p>
+</div>
+<div class="section" id="the-ci-tool">
+<h2>The CI Tool<a class="headerlink" href="#the-ci-tool" title="Permalink to this headline">¶</a></h2>
+<p>We use Travis for our CI tool. When you push commits to the default branch, Travis builds the site and pushes the build to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>. The content on <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> is what is deployed to the site.
+If an update is made to <code class="docutils literal notranslate"><span class="pre">sphinx-bootstrap-theme</span></code>, Travis will fetch the updates. However, if changes are made to the <code class="docutils literal notranslate"><span class="pre">curriculum-book-template</span></code>, you have to fetch those changes when working on your local copy and push them to the default branch to see them on the live site.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/guide/sphinx-background.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
