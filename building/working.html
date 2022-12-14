@@ -55,23 +55,23 @@
      href="../index.html">Pages <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ol class="current">
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="contributing-a-pr.html">Contributing a Pull Request</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setting Up A New Module Site</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Working With An Existing Module Site</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wiki-setup.html">Set Up a New Course Wiki</a></li>
-</ol>
-<ol>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../guide/sphinx-background.html">How Sphinx Works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/style.html">Style Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/admonitions.html">Admonitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/accessibility.html">Curriculum Accessibility</a></li>
-</ol>
-<ol>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../curriculum/creating.html">How To Create Curriculum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../curriculum/making-videos.html">Making Lesson Videos</a></li>
-</ol>
+</ul>
 </ul>
 </li>
               
@@ -246,17 +246,17 @@ cases it may be suitable to use MD source files.</p>
 <div class="section" id="pros">
 <h4>Pros<a class="headerlink" href="#pros" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>Table of contents generation</li>
-<li>Built-in admonition (note, warning, etc) support</li>
-<li>Support for cross-page references</li>
+<li><p>Table of contents generation</p></li>
+<li><p>Built-in admonition (note, warning, etc) support</p></li>
+<li><p>Support for cross-page references</p></li>
 </ul>
 </div>
 <div class="section" id="cons">
 <h4>Cons<a class="headerlink" href="#cons" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>More complicated syntax than MD</li>
-<li>Less well-known among developers than MD</li>
-<li>Table syntax is difficult to work with</li>
+<li><p>More complicated syntax than MD</p></li>
+<li><p>Less well-known among developers than MD</p></li>
+<li><p>Table syntax is difficult to work with</p></li>
 </ul>
 </div>
 <div class="section" id="working-with-rst">
@@ -270,32 +270,29 @@ it as a reference. A modest familiarity with RST with go a long way
 toward allowing you to create rich curriculum pages.</p>
 <p>Here are a few things to note if you’re new to RST:</p>
 <ul>
-<li><p class="first">RST is sensitive to whitespace in some cases. For example, when using
+<li><p>RST is sensitive to whitespace in some cases. For example, when using
 a directive, the contents of the directive must be indented to align
-with the directive name (usually 3 spaces).</p>
-</li>
-<li><p class="first">Tables in RST require alignment of column contents and
+with the directive name (usually 3 spaces).</p></li>
+<li><p>Tables in RST require alignment of column contents and
 column-separators vertically. This is a common gotcha for those new
-to RST.</p>
-</li>
-<li><p class="first">Headings do not require a specific character (as MD does with <code class="docutils literal notranslate"><span class="pre">#</span></code>).
+to RST.</p></li>
+<li><p>Headings do not require a specific character (as MD does with <code class="docutils literal notranslate"><span class="pre">#</span></code>).
 Instead, any text underlined by a repeated occurance of the same
 character will be a heading. The level of the heading is determined
 by the order of the character used in the doc.</p>
 <p>For example:</p>
 <ul class="simple">
-<li>Level 1 Heading ===============</li>
-<li>Level 2 Heading —————</li>
-<li>Another Level 1 Heading =======================</li>
-<li>Level 3 Heading ^^^^^^^^^^</li>
+<li><p>Level 1 Heading ===============</p></li>
+<li><p>Level 2 Heading —————</p></li>
+<li><p>Another Level 1 Heading =======================</p></li>
+<li><p>Level 3 Heading ^^^^^^^^^^</p></li>
 </ul>
 </li>
-<li><p class="first">The <a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html" target="_blank">RST and Sphinx
+<li><p>The <a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html" target="_blank">RST and Sphinx
 Cheatsheet<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
 is a good resource for getting used to RST. Note that the rendered
 examples may look slightly different visually than those given due to
-differences between Sphinx templates.</p>
-</li>
+differences between Sphinx templates.</p></li>
 </ul>
 <p>When building a site with Sphinx, you are often given robust and
 descriptive warnings and errors. At first, these can seem daunting (“Why
@@ -311,19 +308,19 @@ a Sphinx extension that enables support for
 <a class="reference external" href="http://commonmark.org/" target="_blank">CommonMark<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>, a widely-used Markdown
 specificaion. Note that CommonMark does not include widely-used features
 such as table support, which are part of MD language extensions
-(e.g.&nbsp;GitHub Markdown).</p>
+(e.g. GitHub Markdown).</p>
 <div class="section" id="pros-1">
 <span id="id1"></span><h4>Pros<a class="headerlink" href="#pros-1" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>Simple syntax</li>
-<li>Is more widely known by developers than RST</li>
+<li><p>Simple syntax</p></li>
+<li><p>Is more widely known by developers than RST</p></li>
 </ul>
 </div>
 <div class="section" id="cons-1">
 <span id="id2"></span><h4>Cons<a class="headerlink" href="#cons-1" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>Lacks several useful features supported by RST (see above)</li>
-<li>CommonMark does not support tables</li>
+<li><p>Lacks several useful features supported by RST (see above)</p></li>
+<li><p>CommonMark does not support tables</p></li>
 </ul>
 </div>
 </div>
@@ -360,8 +357,8 @@ deployment mechanism is to create a pull request. This allows the team
 to review your changes, and to look for common formatting issues before
 deploying.</p>
 <div class="admonition">
-<p class="first admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
-<p class="last">Some course instructors and TAs may be granted direct commit access to course curriculum modules, based on the circumstances. If you would like direct commit access, talk to somebody on the Education team.</p>
+<p class="admonition-title"><i class="fas fa-sticky-note" aria-hidden="true"></i>Note</p>
+<p>Some course instructors and TAs may be granted direct commit access to course curriculum modules, based on the circumstances. If you would like direct commit access, talk to somebody on the Education team.</p>
 </div>
 </div>
 <div class="section" id="staff-contributions">
@@ -370,8 +367,8 @@ deploying.</p>
 repositories that they’re working on. Pushing changes to the GitHub repo
 will automatically deploy the new files.</p>
 <div class="admonition">
-<p class="first admonition-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Warning</p>
-<p class="last">Changes to GitHub Pages sites can take several minutes to be reflected. If you push and don’t see your change, wait a few minutes and do a hard refresh of the page.</p>
+<p class="admonition-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Warning</p>
+<p>Changes to GitHub Pages sites can take several minutes to be reflected. If you push and don’t see your change, wait a few minutes and do a hard refresh of the page.</p>
 </div>
 </div>
 </div>
